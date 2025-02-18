@@ -1,0 +1,59 @@
+/* ------- Manrope -------- */
+
+@import url("https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800&display=swap");
+
+/* ------- GeneralSans ------- */
+
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("../fonts/general-sans/GeneralSans-Medium.woff2") format("woff2"),
+    url("../fonts/general-sans/GeneralSans-Medium.woff") format("woff"),
+    url("../fonts/general-sans/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("../fonts/general-sans/GeneralSans-Semibold.woff2") format("woff2"),
+    url("../fonts/general-sans/GeneralSans-Semibold.woff") format("woff"),
+    url("../fonts/general-sans/GeneralSans-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src: url("../fonts/general-sans/GeneralSans-Variable.woff2") format("woff2"),
+    url("../fonts/general-sans/GeneralSans-Variable.woff") format("woff"),
+    url("../fonts/general-sans/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-VariableItalic";
+  src: url("../fonts/general-sans/GeneralSans-VariableItalic.woff2")
+      format("woff2"),
+    url("../fonts/general-sans/GeneralSans-VariableItalic.woff") format("woff"),
+    url("../fonts/general-sans/GeneralSans-VariableItalic.ttf")
+      format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* ------- DM Sans ------- */
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");
+
+/* ------- Plus Jakarta Sans ------- */
+
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic&display=swap");
+
+/* ------- Montserrat ------- */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap");

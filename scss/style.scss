@@ -1,0 +1,128 @@
+@use "sass:math";
+
+@import "fonts";
+@import "root";
+
+@import "_null.scss";
+@import "_variable.scss";
+@import "_mixins.scss";
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 1 auto;
+}
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 2;
+
+@if ($responsiveType==2) {
+  // Чуйна
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: toRem($containerWidth);
+      margin: 0 auto;
+    }
+    @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      } @else {
+        @include adaptiveValue(
+          "padding-left",
+          math.div($containerPadding, 2),
+          15
+        );
+        @include adaptiveValue(
+          "padding-right",
+          math.div($containerPadding, 2),
+          15
+        );
+      }
+    }
+  }
+} @else {
+  // Брейк-поїнтами
+  [class*="__container"] {
+    margin: 0 auto;
+    @if ($maxWidthContainer>0) {
+      max-width: toRem($containerWidth);
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      }
+    }
+    @media (max-width: $pc) {
+      max-width: toRem(970);
+    }
+    @media (max-width: $tablet) {
+      max-width: toRem(750);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 toRem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+[class*="__container"] {
+  // max-width: 1240px;
+  // margin: 0 auto;
+}
+
+/* Display/D1 */
+.d1 {
+  font-family: "GeneralSans-Variable";
+  line-height: 120%;
+  // color: var(--neutral-900);
+}
+
+/* Heading/H1 */
+.H1 {
+  font-family: "GeneralSans-Variable";
+  font-size: 60px;
+  line-height: 120%;
+  color: var(--neutral-900);
+}
+
+/* Heading/H2 */
+.H2 {
+  font-family: "GeneralSans-Variable";
+  font-size: 56px;
+  line-height: 120%;
+  color: var(--neutral-900);
+}
+
+/* Heading/H3 */
+.H3-M {
+  font-family: "GeneralSans-Variable";
+  font-size: 40px;
+  line-height: 120%;
+  color: var(--neutral-900);
+}
+
+/* Heading/H4-SB */
+.H4-M {
+  font-family: "GeneralSans-Variable";
+  font-size: 30px;
+  line-height: 120%;
+  color: var(--neutral-900);
+}
+
+/* Heading/H4-SB */
+.H5-M {
+  font-family: "GeneralSans-Variable";
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--neutral-900);
+}
+
+/* blocks */
+@import "./blocks/header";
