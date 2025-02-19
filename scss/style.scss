@@ -16,6 +16,9 @@
 .content {
   flex: 1 1 auto;
 }
+.open {
+  display: flex !important;
+}
 
 // Тип адаптива:
 // 1 = чуйність (у контейнера немає брейкпоінтів),
@@ -126,3 +129,5 @@ $responsiveType: 2;
 
 /* blocks */
 @import "./blocks/header";
+
+
