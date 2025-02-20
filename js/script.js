@@ -1,4 +1,7 @@
 import slider from "./modules/slider.js";
+import tabs from "./modules/tabs.js";
+
+import { persons } from "./modules/personsData.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // burger menu
@@ -27,11 +30,48 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".burger-menu__nav").classList.toggle("open");
   });
 
+  // slider in hero section
   slider({
     lineSelector: ".hero__slider-inner",
     wrapperSelector: ".hero__slider",
     itemSelector: ".hero__slider-item img", //img elements only
-    // arrowNextSelector: ".controls_next",
-    // arrowPrevSelector: ".controls_prev",
   });
+
+  // tabs in about section
+  tabs({
+    selectorContent: ".tab-content__container",
+    selectorTab: ".tab-btn",
+    selectorParent: ".tab-content",
+    activeClass: "nav-active",
+  });
+
+  // add persons cards to the DOM
+  function addPersonsCards() {
+    const personsContainer = document.querySelector(".tab-content");
+    const idDeveloper = "developer";
+    const uiDesigner = "uiDesigner";
+    const projectManager = "projectManager";
+    const idDesigner = "designer";
+
+    persons.forEach((person) => {
+      const contentContainer = document.createElement("div");
+      contentContainer.classList.add("tab-content__container");
+      contentContainer.setAttribute("id", person.dataTab);
+      personsContainer.appendChild(contentContainer);
+
+      const card = document.createElement("div");
+      card.classList.add("tab-content__card");
+      card.innerHTML = `
+        <img src="${person.photo}" alt="${person.alt}">
+        <h3>${person.name}</h3>
+        <p>${person.jobTitle}</p>
+        <div class="person-card__rating">Rating: ${person.rating}</div>
+        <div class="person-card__skills">${person.skills}</div>
+        <a href="#${person.dataTab}" class="person-card__learn-more">Learn more</a>
+      `;
+      contentContainer.appendChild(card);
+    });
+  }
+
+  // addPersonsCards();
 });

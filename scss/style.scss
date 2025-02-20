@@ -83,51 +83,58 @@ $responsiveType: 2;
 /* Display/D1 */
 .d1 {
   font-family: "GeneralSans-Variable";
-  line-height: 120%;
+  line-height: 67px;
   // color: var(--neutral-900);
 }
 
 /* Heading/H1 */
 .H1 {
   font-family: "GeneralSans-Variable";
+  @include adaptiv-value("font-size", 0, 0, 0);
+  @include adaptiv-value("line-height", 0, 0, 0);
   font-size: 60px;
-  line-height: 120%;
+  line-height: 67px;
   color: var(--neutral-900);
 }
 
 /* Heading/H2 */
 .H2 {
   font-family: "GeneralSans-Variable";
-  font-size: 56px;
-  line-height: 120%;
+  @include adaptiv-value("font-size", 56, 30, 0);
+  @include adaptiv-value("line-height", 67, 36, 0);
   color: var(--neutral-900);
 }
 
 /* Heading/H3 */
 .H3-M {
   font-family: "GeneralSans-Variable";
+  @include adaptiv-value("font-size", 0, 0, 0);
+  @include adaptiv-value("line-height", 0, 0, 0);
   font-size: 40px;
-  line-height: 120%;
+  line-height: 67px;
   color: var(--neutral-900);
 }
 
 /* Heading/H4-SB */
 .H4-M {
   font-family: "GeneralSans-Variable";
+  @include adaptiv-value("font-size", 0, 0, 0);
+  @include adaptiv-value("line-height", 0, 0, 0);
   font-size: 30px;
-  line-height: 120%;
+  line-height: 67px;
   color: var(--neutral-900);
 }
 
 /* Heading/H4-SB */
 .H5-M {
   font-family: "GeneralSans-Variable";
+  @include adaptiv-value("font-size", 0, 0, 0);
+  @include adaptiv-value("line-height", 0, 0, 0);
   font-size: 24px;
-  line-height: 120%;
+  line-height: 67px;
   color: var(--neutral-900);
 }
 
 /* blocks */
 @import "./blocks/header";
-
-
+@import "./blocks/seekers";

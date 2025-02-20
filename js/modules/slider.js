@@ -17,44 +17,34 @@ function slider({
 
   function initResize() {
     console.log("resize");
-    width = 338 + "px";
+    width = wrapper.offsetWidth * 0.2;
     sliderLine.style.width = width * slides.length + "px";
-      wrapper.style.maxHeight = 338 + "px";
+    wrapper.style.maxHeight = 338 + "px";
     slides.forEach((item) => {
       item.style.width = width + "px";
       // item.style.height = "auto";
       item.style.height = 100 + "%";
     });
     console.log(width);
+    console.log(slides.length);
+
     rollSlider();
   }
 
-  window.addEventListener("resize", initResize);
+  // window.addEventListener("resize", initResize);
 
   initResize();
 
   function rollSlider() {
     count++;
-    sliderLine.style.transform = `translateX(-${width * count}px)`;
+    if (count >= slides.length - 1) {
+      count = -1;
+    }
+
+    sliderLine.style.transform = `translateX(-${width * (count * 0.65)}px)`;
   }
 
   setInterval(rollSlider, 1000);
-
-  // arrowNext.addEventListener("click", () => {
-  //   count++;
-  //   if (count >= slides.length) {
-  //     count = 0;
-  //   }
-  //   rollSlider();
-  // });
-
-  // arrowPrev.addEventListener("click", () => {
-  //   count--;
-  //   if (count <= 0) {
-  //     count = slides.length - 1;
-  //   }
-  //   rollSlider();
-  // });
 }
 
 export default slider;

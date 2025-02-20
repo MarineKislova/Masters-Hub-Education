@@ -138,6 +138,7 @@
     align-items: center;
     padding: 0px;
     gap: 28px;
+    @include adaptiv-value("padding-bottom", 52, 26, 0);
 
     @media (max-width: 644px) {
       flex-direction: column;
@@ -146,8 +147,11 @@
 
   &__search-form {
     display: flex;
+
     align-items: center;
-    padding: 16px 8px 16px 24px;
+    @include adaptiv-value("padding", 16, 8, 0);
+
+    // padding: 16px;
     // @include adaptiv-value("gap", 16, 2, 0);
     max-width: 499px;
     height: 56px;
@@ -158,14 +162,18 @@
 
     input[type="text"] {
       &:nth-child(1) {
+        text-align: center;
         border: none;
+        @include adaptiv-value("font-size", 16, 12, 0);
       }
 
       &:nth-child(2) {
+        text-align: center;
         border: none;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         border-left: 1px solid #000;
+        @include adaptiv-value("font-size", 16, 12, 0);
       }
     }
   }
@@ -185,39 +193,27 @@
   }
 
   &__slider {
-    @include adaptiv-value("padding-top", 52, 26, 0);
     max-width: 100%;
-    border: 2px solid #5f9783;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 20px;
   }
 
   &__slider-inner {
     display: flex;
     gap: 10px;
-    // justify-content: space-between;
-    // align-items: center;
-    // width: 2960px;
-    // overflow: hidden;
-
-    transition: all 1s ease-in-out;
+    transition: all 1s linear;
     display: flex;
-    // background-color: orangered;
   }
 
   &__slider-item {
-    // width: 288px;
-    // height: 338px;
-    // background: #f3f0d1;
-    // border-radius: 20px;
-    // transition: background-color 0.5s linear;
+    // transition: all 0.5s linear;
     img {
-      // width: 100%;
+      width: 100%;
       height: auto;
       object-fit: cover;
       border-radius: 20px;
     }
-
   }
 }
 
@@ -235,6 +231,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    font-weight: 800;
     // border: none;
     border: 1px solid rgba(164, 151, 243, 0.95);
     border-radius: 10px;
@@ -247,7 +244,7 @@
   }
 
   &__nav {
-    li{
+    li {
       color: var(--neutral-900);
     }
   }

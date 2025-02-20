@@ -628,3 +628,5 @@ const persons = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi exercitationem dicta porro aliquam suscipit nisi aperiam error temporibus id quia. Modi, ad amet. Quas neque molestias architecto debitis in.",
   },
 ];
+
+export {persons}
