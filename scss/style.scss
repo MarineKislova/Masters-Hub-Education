@@ -12,6 +12,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background: #fafafa;
+  padding-bottom: 200px;
 }
 .content {
   flex: 1 1 auto;
@@ -138,3 +140,6 @@ $responsiveType: 2;
 /* blocks */
 @import "./blocks/header";
 @import "./blocks/seekers";
+@import "./blocks/features";
+@import "./blocks/clients";
+@import "./blocks/works";

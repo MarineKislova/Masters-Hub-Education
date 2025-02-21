@@ -1,0 +1,49 @@
+.works {
+  &__container {
+    display: flex;
+    // flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+    @include adaptiv-value("padding-top", 88, 28, 0);
+    @include adaptiv-value("padding-bottom", 88, 28, 0);
+  }
+
+  &__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 620px;
+
+    &:nth-child(1) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:nth-child(2) {
+    }
+  }
+
+  &__column-title {
+  }
+
+  &__row {
+  }
+
+  &__row-item {
+  }
+
+  &__row-text {
+  }
+
+  &__column-1 {
+  }
+
+  &__row-1 {
+  }
+
+  &__row-1-text {
+  }
+
+  &__column-2 {
+  }
+}

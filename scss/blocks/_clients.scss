@@ -1,0 +1,36 @@
+.clients {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptiv-value("padding-top", 88, 28, 0);
+    @include adaptiv-value("padding-bottom", 88, 28, 0);
+  }
+
+  &__title {
+    max-width: 657px;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    color: var(--neutral-900);
+  }
+
+  &__description {
+    max-width: 657px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--neutral-600);
+    padding-top: 16px;
+  }
+
+  &__img {
+    @include adaptiv-value("padding-top", 40, 20, 0);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

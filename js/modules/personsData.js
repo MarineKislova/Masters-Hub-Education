@@ -7,6 +7,7 @@ const persons = [
     jobTitle: "Developer",
     rating: "4.5",
     skills: "JavaScript, React, Angular",
+    skill: ["JavaScript", "React", "Angular"],
     dataTab: "developer",
     about:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi exercitationem dicta porro aliquam suscipit nisi aperiam error temporibus id quia. Modi, ad amet. Quas neque molestias architecto debitis in.",
@@ -271,7 +272,7 @@ const persons = [
   /* ------- Designer ------- */
   {
     name: "Maya Paterson",
-    photo: "img/person/Maya-Paterson",
+    photo: "img/person/Maya-Paterson.png",
     alt: "Maya-Paterson",
     jobTitle: "Designer",
     rating: "4.4",

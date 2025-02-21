@@ -3,22 +3,22 @@
     display: flex;
     flex-direction: column;
     @include adaptiv-value("padding-top", 88, 30, 0);
-    @media (min-width:1972px) {
-        padding-top: 20px;
+    @media (min-width: 1972px) {
+      padding-top: 20px;
     }
   }
 
   &__title {
     display: flex;
-   max-width: 482px;
+    max-width: 482px;
     max-height: 134px;
     font-weight: 500;
     display: flex;
     align-self: center;
     text-align: center;
 
-    @media (min-width:1972px) {
-        max-height: 254px; 
+    @media (min-width: 1972px) {
+      max-height: 254px;
     }
   }
 
@@ -28,6 +28,36 @@
     max-width: 388px;
     max-height: 48px;
     color: #6c7787;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 4px 4px 24px;
+    gap: 16px;
+    width: 144px;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid var(--primary-200);
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    align-self: center;
+    @include adaptiv-value("margin-top", 40, 20, 0);
+    @include adaptiv-value("margin-bottom", 80, 40, 0);
+    background-image: linear-gradient(
+      90deg,
+      #00c0ff 0%,
+      #ffcf00 49%,
+      #fc4f4f 80%,
+      #00c0ff 100%
+    );
+    animation: slidebg 10s linear infinite;
+    @keyframes slidebg {
+      to {
+        background-position: 20vw;
+      }
+    }
   }
 }
 .tab-nav {
@@ -45,7 +75,8 @@
   justify-content: center;
   align-items: center;
   align-self: center;
-  padding: 10px;
+  gap: 8px;
+  padding: 5px;
   height: 48px;
   @include adaptiv-value("width", 170.29, 100, 0);
   flex: none;
@@ -68,7 +99,7 @@
   border-bottom: 1px solid #0066ff;
 }
 .tab-content {
-  &__container{
+  &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
     justify-content: center;
@@ -83,6 +114,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     padding: 24px 16px;
     // padding: 20px;
     gap: 21px;
@@ -94,6 +126,12 @@
     border-radius: 20px;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow: 3px 5px 8px var(--primary-50), -3px -5px 8px #ffffff;
+
+    &:hover {
+      border: 1px solid var(--neutral-100);
+      background: linear-gradient(145deg, #f6ffff, #a3aab5);
+      box-shadow: 5px 5px 22px #8a9099, -5px -5px 22px #ffffff;
+    }
   }
 
   &__card-img {
@@ -137,6 +175,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    font-weight: 200;
+    font-style: italic;
     border: 1px solud var(--neutral-900);
     border-radius: 50px;
   }
@@ -145,6 +185,7 @@
 .card-active {
   background: #e6f0ff;
   border: 1px solid #8ab9ff;
-  box-shadow: 10px 25px 100px rgba(0, 43, 107, 0.25);
-  border-radius: 20px;
+  // box-shadow: 10px 25px 100px rgba(0, 43, 107, 0.25);
+  background: linear-gradient(145deg, #f6ffff, #cfd8e6);
+  box-shadow: 5px 5px 22px #8a9099, -5px -5px 22px #ffffff;
 }
