@@ -131,7 +131,6 @@ window.addEventListener("DOMContentLoaded", () => {
       cards.forEach((card) => {
         card.classList.remove("card-active");
         console.log("remove active class");
-        
       });
       card.classList.add("card-active");
     });
@@ -139,5 +138,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   persons.forEach((person) => {
     addPersonsCards(person);
+  });
+
+  //showcase
+  const showcase = document.querySelector(".showcase__portfolio-item");
+  showcase.addEventListener("click", () => {
+    this.classList.toggle("active");
   });
 });

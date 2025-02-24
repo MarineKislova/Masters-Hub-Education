@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     @include adaptiv-value("padding-top", 88, 28, 0);
-    @include adaptiv-value("padding-bottom", 88, 28, 0);
+    // @include adaptiv-value("padding-bottom", 88, 8, 0);
   }
 
   &__title {

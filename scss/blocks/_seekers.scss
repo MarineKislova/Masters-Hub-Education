@@ -39,23 +39,20 @@
     width: 144px;
     height: 48px;
     background: #ffffff;
-    border: 1px solid var(--primary-200);
-    backdrop-filter: blur(5px);
+    // border: 1px solid var(--primary-200);
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, #0ac2ff, #ffcf00, #fc4f4f, #00c0ff, #6c7787) border-box;
     border-radius: 100px;
+    border: 2px solid transparent;
+    backdrop-filter: blur(5px);
     align-self: center;
     @include adaptiv-value("margin-top", 40, 20, 0);
     @include adaptiv-value("margin-bottom", 80, 40, 0);
-    background-image: linear-gradient(
-      90deg,
-      #00c0ff 0%,
-      #ffcf00 49%,
-      #fc4f4f 80%,
-      #00c0ff 100%
-    );
+
     animation: slidebg 10s linear infinite;
     @keyframes slidebg {
       to {
-        background-position: 20vw;
+        background-position: 30vw;
       }
     }
   }
