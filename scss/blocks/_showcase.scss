@@ -1,34 +1,57 @@
 .showcase {
   &__container {
+    @include adaptiv-value("padding-top", 88, 28, 0);
   }
 
   &__row {
+    display: flex;
+    justify-content: center;
   }
 
   &__title {
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    @include adaptiv-value("padding-bottom", 40, 20, 0);
   }
 
   &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    @include adaptiv-value("padding-top", 40, 20, 0);
+    @include adaptiv-value("padding-bottom", 40, 10, 0);
+  }
+
+  &__pagination-prev {
+    cursor: pointer;
+  }
+
+  &__pagination-next {
+    cursor: pointer;
   }
 
   &__portfolio {
     display: flex;
-    overflow: hidden;
-    gap: 24px;
+    @include adaptiv-value("gap", 14, 4, 0);
+    gap: 1%;
     border-radius: 20px;
     padding: 5px;
     height: 100%;
-    // max-width: 1240px;
+    min-width: 81px;
+    max-width: 1240px;
     flex: 0 0 auto;
   }
   &__portfolio-item {
-    
-    // min-width: 81px;
+    flex: 0 0 2%;
+    min-width: 5%;
     // max-width: 461px;
     height: 603px;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    transition: flex 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    filter:  grayscale(80%) ;
+
 
     video {
       width: 100%;
@@ -41,13 +64,16 @@
   }
 
   &__portfolio-content {
-    max-width: 250px;
-    max-height: 200px;
-    margin-top: -190px;
+    opacity: 0;
+    // max-width: min-content;
+    // max-height: 250px;
+    margin-top: -250px;
+    // writing-mode: vertical-rl;
+    transform: rotate(-180deg);
     z-index: 50;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(6px) saturate(180%);
+    padding: 10px;
+    // background-color: rgba(0, 0, 0, 0.3);
+    // backdrop-filter: blur(6px) saturate(180%);
 
     h3 {
       font-family: "GeneralSans-Variable";
@@ -67,7 +93,28 @@
   }
 }
 
-.active {
-  flex: 1 0 auto;
-  width: 461px;
+.expanded {
+  flex: 1 0 50%;
+  filter: none;
+
+  .showcase__portfolio-content {
+    // display: flex;
+    // flex-direction: column;
+    max-width: 250px;
+    max-height: 300px;
+    transform: rotate(0deg);
+    margin-top: -170px;
+    writing-mode: horizontal-tb;
+    z-index: 100;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    backdrop-filter: blur(6px) saturate(180%);
+    
+    transition: all 0.3s linear;
+
+    @media (max-width: 375px) {
+      margin-top: -190px;
+    }
+  }
 }

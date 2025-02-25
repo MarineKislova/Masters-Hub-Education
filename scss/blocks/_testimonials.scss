@@ -1,0 +1,121 @@
+.testimonials {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("padding-top", 88, 28, 0);
+  }
+
+  &__title {
+    font-weight: 500;
+    padding-bottom: 40px;
+  }
+
+  &__slider {
+    display: flex;
+    max-height: 550px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__inner {
+    transition: all 1s ease-in-out;
+    display: flex;
+    width: 1240px;
+    // gap: 1px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__item-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 16px;
+    gap: 40px;
+    // width: 100%;
+    flex: 1 0 50%;
+    height: 500px;
+    background: #1e242c;
+    border-radius: 20px;
+
+    p {
+      //   max-width: 128px;
+      // height: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+      //   /* Inside auto layout */
+      //   flex: none;
+      //   order: 0;
+      //   flex-grow: 0;
+    }
+
+    span {
+      font-family: "GeneralSans-Variable";
+      font-weight: 700;
+    }
+
+    h3 {
+      // width: 528px;
+      // height: 192px;
+      font-family: "GeneralSans-Variable";
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  &__item-img {
+    // width: 500px;
+    height: 500px;
+    flex: 1 0 50%;
+    border-radius: 20px;
+    filter: grayscale(100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 150px;
+    padding-left: 15%;
+    margin-top: -88px;
+    justify-content: start;
+  }
+
+  &__pagination-prev,
+  &__pagination-next {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    width: 64px;
+    height: 64px;
+    background: var(--neutral-50);
+    border-radius: 100px;
+    color: #1e242c;
+    font-weight: 800;
+    font-size: 24px;
+
+    &:hover {
+      background: #0066ff;
+    }
+  }
+}

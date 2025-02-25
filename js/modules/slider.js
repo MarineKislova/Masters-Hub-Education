@@ -16,7 +16,7 @@ function slider({
   const arrowPrev = document.querySelector(arrowPrevSelector);
 
   function initResize() {
-    console.log("resize");
+    // console.log("resize");
     width = wrapper.offsetWidth * 0.2;
     sliderLine.style.width = width * slides.length + "px";
     wrapper.style.maxHeight = 338 + "px";
@@ -25,8 +25,8 @@ function slider({
       // item.style.height = "auto";
       item.style.height = 100 + "%";
     });
-    console.log(width);
-    console.log(slides.length);
+    // console.log(width);
+    // console.log(slides.length);
 
     rollSlider();
   }
@@ -36,6 +36,7 @@ function slider({
   initResize();
 
   function rollSlider() {
+
     count++;
     if (count >= slides.length - 1) {
       count = -1;
