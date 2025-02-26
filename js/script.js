@@ -1,5 +1,6 @@
 import slider from "./modules/slider.js";
 import tabs from "./modules/tabs.js";
+import addPersonsCards from "./modules/addPersonCards.js";
 
 import { persons } from "./modules/personsData.js";
 
@@ -46,101 +47,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // add persons cards to the DOM
-  const jobTitles = [
-    "developer",
-    "uiDesigner",
-    "projectManager",
-    "designer",
-    "accountant",
-    "HR",
-    "marketing",
-  ];
-  const jobTitlesContainer = document.querySelectorAll(
-    ".tab-content__container"
-  );
-
-  function addPersonsCards(person) {
-    const card = document.createElement("div");
-    card.classList.add("tab-content__card");
-    card.setAttribute("data-tab", person.dataTab);
-
-    // add image to the card
-    const image = document.createElement("div");
-    image.classList.add("tab-content__card-img");
-    card.appendChild(image);
-    const img = document.createElement("img");
-    img.src = person.photo;
-    img.alt = person.alt;
-    image.appendChild(img);
-
-    // add rating to the card
-    const rating = document.createElement("div");
-    rating.classList.add("tab-content__card-rating");
-    card.appendChild(rating);
-    const star = document.createElement("i");
-    star.classList.add("fa-solid", "fa-star");
-    star.style.color = "#FFD43B";
-    const starSpan = document.createElement("span");
-    starSpan.textContent = `${person.rating} (6)`;
-    rating.appendChild(star);
-    rating.appendChild(starSpan);
-    // for (let i = 0; i < person.rating; i++) {
-    //   const star = document.createElement("i");
-    //   star.classList.add("fas", "fa-star", "checked");
-    //   rating.appendChild(star);
-    // }
-
-    // add name to the card
-    const name = document.createElement("div");
-    name.classList.add("tab-content__card-name");
-    name.textContent = person.name;
-    card.appendChild(name);
-
-    // add job title to the card
-    const jobTitle = document.createElement("div");
-    jobTitle.classList.add("tab-content__card-job-title");
-    jobTitle.textContent = person.jobTitle;
-    card.appendChild(jobTitle);
-
-    // add skills to the card
-    const skills = document.createElement("div");
-    skills.classList.add("tab-content__card-skills");
-    skills.textContent = person.skills;
-    card.appendChild(skills);
-
-    // person.skills.split(",").forEach((skill) => {
-    //   const skillSpan = document.createElement("span");
-    //   skillSpan.textContent = skill.trim();
-    //   skills.appendChild(skillSpan);
-    // });
-    // add description to the card
-    const description = document.createElement("div");
-    description.classList.add("tab-content__card-description");
-    description.textContent = person.description;
-    card.appendChild(description);
-
-    jobTitlesContainer.forEach((container) => {
-      if (container.getAttribute("id") === person.dataTab) {
-        container.appendChild(card);
-      }
-    });
-
-    //active card on click
-    card.addEventListener("click", () => {
-      const cards = document.querySelectorAll(".tab-content__card");
-      cards.forEach((card) => {
-        card.classList.remove("card-active");
-        console.log("remove active class");
-      });
-      card.classList.add("card-active");
-    });
-  }
-
   persons.forEach((person) => {
-    addPersonsCards(person);
+    addPersonsCards(person, ".tab-content__container");
   });
 
-  //showcase
+  //showcase expanded on click
   const showcase = document.querySelectorAll(".showcase__portfolio-item");
   showcase.forEach((card) => {
     card.addEventListener("click", () => {
@@ -190,30 +101,25 @@ window.addEventListener("DOMContentLoaded", () => {
   rollShowCase();
 
   //testimonials slider
-  const wrapperTestimonials = document.querySelector(".testimonials__slider");
-  const testimonialsInner= document.querySelectorAll(".testimonials__inner");
-  let width;
   const testimonials = document.querySelectorAll(".testimonials__item");
-  const prevTestimonial = document.querySelector(".testimonials__pagination-prev");
-  const nextTestimonial = document.querySelector(".testimonials__pagination-next");
-  const currentItem = [testimonials[0], testimonials[1], testimonials[2], testimonials[3], testimonials[4]];
+  const prevTestimonial = document.querySelector(
+    ".testimonials__pagination-prev"
+  );
+  const nextTestimonial = document.querySelector(
+    ".testimonials__pagination-next"
+  );
+  const currentItem = [
+    testimonials[0],
+    testimonials[1],
+    testimonials[2],
+    testimonials[3],
+    testimonials[4],
+  ];
   let countTestimonial = 0;
-
-  function initResize(){
-    width = wrapperTestimonials.offsetWidth;
-    testimonialsInner.style.width = `${width * currentItem.length}px`;
-    testimonials.forEach((item) => {
-      item.style.width = `${width}px`;
-    });
-
-    showTestimonial();
-  }
-
-  // initResize();
 
   function showTestimonial() {
     nextTestimonial.onclick = () => {
-      if(countTestimonial < currentItem.length - 1) {
+      if (countTestimonial < currentItem.length - 1) {
         countTestimonial++;
         currentItem[countTestimonial].style.display = "flex";
         currentItem[countTestimonial - 1].style.display = "none";
@@ -222,9 +128,9 @@ window.addEventListener("DOMContentLoaded", () => {
         currentItem[countTestimonial].style.display = "flex";
         currentItem[currentItem.length - 1].style.display = "none";
       }
-    }
+    };
     prevTestimonial.onclick = () => {
-      if(countTestimonial > 0) {
+      if (countTestimonial > 0) {
         countTestimonial--;
         currentItem[countTestimonial].style.display = "flex";
         currentItem[countTestimonial + 1].style.display = "none";
@@ -233,10 +139,34 @@ window.addEventListener("DOMContentLoaded", () => {
         currentItem[countTestimonial].style.display = "flex";
         currentItem[0].style.display = "none";
       }
-      
-    }
-    
+    };
   }
 
   showTestimonial();
+
+  // accordion
+
+  const accordionTitle = document.querySelectorAll(
+    ".faq__accordion-item-header"
+  );
+  const accordionItems = document.querySelectorAll(".faq__accordion-item");
+
+  accordionTitle.forEach((item) => {
+    item.addEventListener("click", () => {
+      removeCollapsedClass();
+      item.closest(".faq__accordion-item").classList.add("collapsed");
+      const accordionContent = item.nextElementSibling;
+      accordionContent.style.display =
+        accordionContent.style.display === "flex" ? "none" : "flex";
+    });
+  });
+
+  function removeCollapsedClass() {
+    accordionItems.forEach((item) => {
+      item.classList.remove("collapsed");
+    });
+    // accordionContent.forEach((item) => {
+    //   item.style.display = "none";
+    // });
+  }
 });
