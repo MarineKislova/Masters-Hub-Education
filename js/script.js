@@ -150,23 +150,22 @@ window.addEventListener("DOMContentLoaded", () => {
     ".faq__accordion-item-header"
   );
   const accordionItems = document.querySelectorAll(".faq__accordion-item");
+  const accordionContent = document.querySelectorAll(
+    ".faq__accordion-item-content"
+  );
 
   accordionTitle.forEach((item) => {
     item.addEventListener("click", () => {
       removeCollapsedClass();
       item.closest(".faq__accordion-item").classList.add("collapsed");
-      const accordionContent = item.nextElementSibling;
-      accordionContent.style.display =
-        accordionContent.style.display === "flex" ? "none" : "flex";
+      const content = item.nextElementSibling;
+      content.style.display = content.style.display == "flex" ? "none" : "flex";
     });
   });
 
   function removeCollapsedClass() {
-    accordionItems.forEach((item) => {
-      item.classList.remove("collapsed");
+    accordionItems.forEach((items) => {
+      items.classList.remove("collapsed");
     });
-    // accordionContent.forEach((item) => {
-    //   item.style.display = "none";
-    // });
   }
 });

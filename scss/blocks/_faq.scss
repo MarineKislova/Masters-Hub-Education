@@ -1,8 +1,10 @@
 .faq {
+  background: #ffffff;
   &__container {
     display: flex;
     flex-direction: column;
     @include adaptiv-value("padding-top", 88, 28, 0);
+    @include adaptiv-value("padding-bottom", 88, 28, 0);
   }
 
   &__title {
@@ -15,13 +17,19 @@
     display: flex;
     gap: 30px;
     width: 100%;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__accordeon {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    @include adaptiv-value("gap", 30, 15, 0);
+    // gap: 30px;
     flex: 1 0 45%;
+
+    
   }
 
   &__accordion-item {
@@ -29,7 +37,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 24px;
-    gap: 16px;
+    @include adaptiv-value("padding", 16, 8, 0);
+    // gap: 16px;
     background: #ffffff;
     border: 1px solid #e6e9ea;
     border-radius: 20px;
@@ -37,7 +46,8 @@
 
   &__accordion-item-header {
     display: flex;
-    gap: 17px;
+    @include adaptiv-value("gap", 17, 7, 0);
+    // gap: 17px;
     cursor: pointer;
     // padding: 5px;
 
@@ -56,8 +66,10 @@
     font-family: "GeneralSans-Variable";
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+    @include adaptiv-value("font-size", 24, 18, 0);
+    @include adaptiv-value("line-height", 29, 24, 0);
+    // font-size: 24px;
+    // line-height: 29px;
     color: var(--neutral-900);
   }
 
@@ -71,6 +83,9 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--neutral-600);
+    text-align: justify;
+    text-wrap-mode: wrap;
+    text-wrap-style: pretty;
   }
 
   .collapsed {
@@ -79,13 +94,13 @@
     box-shadow: 10px 25px 100px rgba(0, 43, 107, 0.25);
     border-radius: 20px;
 
-    .faq__accordion-item-body {
-      display: flex;
-    }
+    // .faq__accordion-item-body {
+    //   display: flex;
+    // }
 
-    .faq__accordion-item-icon {
-      rotate: (45deg);
-    }
+    // .faq__accordion-item-icon {
+    //   rotate: (45deg);
+    // }
 
     p {
       background: #ffffff;
