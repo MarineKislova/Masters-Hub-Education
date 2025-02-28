@@ -11,6 +11,7 @@
     font-weight: 500;
     padding-bottom: 40px;
     align-self: center;
+    text-align: center;
   }
 
   &__body {
@@ -46,10 +47,12 @@
 
   &__accordion-item-header {
     display: flex;
-    @include adaptiv-value("gap", 17, 7, 0);
+    justify-content: space-evenly;
+    align-items: center;
+    @include adaptiv-value("gap", 17, 12, 0);
     // gap: 17px;
     cursor: pointer;
-    // padding: 5px;
+    padding: 5px;
 
     p {
       display: flex;
@@ -66,14 +69,18 @@
     font-family: "GeneralSans-Variable";
     font-style: normal;
     font-weight: 500;
+    max-width: 450px;
     @include adaptiv-value("font-size", 24, 18, 0);
     @include adaptiv-value("line-height", 29, 24, 0);
     // font-size: 24px;
     // line-height: 29px;
     color: var(--neutral-900);
+
+   
   }
 
   &__accordion-item-icon {
+    font-size: 26px;
     color: #0066ff;
   }
 
@@ -93,14 +100,6 @@
     border: 1px solid var(--primary-200);
     box-shadow: 10px 25px 100px rgba(0, 43, 107, 0.25);
     border-radius: 20px;
-
-    // .faq__accordion-item-body {
-    //   display: flex;
-    // }
-
-    // .faq__accordion-item-icon {
-    //   rotate: (45deg);
-    // }
 
     p {
       background: #ffffff;

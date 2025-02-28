@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
@@ -36,7 +29,7 @@
                 <li class="hero__menu--link">Partnered Job Board</li>
                 <li class="hero__menu--link">Contact Us</li>
               </ul>
-              <button class="hero__menu--btn">
+              <button data-opensign class="hero__menu--btn">
                 Register Now
                 <img src="icons/iconoir_arrow-up-right.png" alt="" />
               </button>
@@ -58,7 +51,7 @@
                     <li>
                       <a href="#">Contact Us</a>
                     </li>
-                    <li>
+                    <li data-opensign>
                       <a href="#">Register Now</a>
                     </li>
                   </ul>
@@ -144,6 +137,67 @@
           </div>
         </header>
         <!-- end hero -->
+
+        <!-- signUp form -->
+        <div class="form">
+          <div class="form__row">
+            <form class="form__signup" id="signup">
+              <p class="form__form-title">Sign up to your account</p>
+              <div class="form__input-container">
+                <input
+                  type="email"
+                  placeholder="Enter email"
+                  autocomplete="email"
+                  required
+                />
+                <span> </span>
+              </div>
+              <div class="form__input-container">
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <button type="submit" class="form__submit">Sign up</button>
+
+              <p class="form__signup-link">
+                Have account?
+                <button class="signup" type="button">Sign In</button>
+              </p>
+            </form>
+
+            <form class="form__signin" id="signin">
+              <p class="form__form-title">Sign in to your account</p>
+              <div class="form__input-container">
+                <input
+                  type="email"
+                  placeholder="Enter email"
+                  autocomplete="email"
+                  required
+                />
+                <span> </span>
+              </div>
+              <div class="form__input-container">
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <button type="submit" class="form__submit">Sign in</button>
+
+              <p class="form__signin-link">
+                No account?
+                <button class="signin" type="button">Sign Up</button>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- end signUp form -->
 
         <!-- seekers -->
         <div class="seekers">
@@ -727,7 +781,7 @@
                     <h3 class="faq__accordion-item-title">
                       How do I create an account on the job board?
                     </h3>
-                    <div class="faq__accordion-item-icon">&#10011;</div>
+                    <div class="faq__accordion-item-icon">+</div>
                   </div>
                   <div class="faq__accordion-item-body">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -742,7 +796,7 @@
                     <h3 class="faq__accordion-item-title">
                       How do I apply for a job through the platform?
                     </h3>
-                    <div class="faq__accordion-item-icon">&#10011;</div>
+                    <div class="faq__accordion-item-icon">+</div>
                   </div>
                   <div class="faq__accordion-item-body">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -757,7 +811,7 @@
                     <h3 class="faq__accordion-item-title">
                       How can I track the status of my job applications?
                     </h3>
-                    <div class="faq__accordion-item-icon">&#10011;</div>
+                    <div class="faq__accordion-item-icon">+</div>
                   </div>
                   <div class="faq__accordion-item-body">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -774,7 +828,7 @@
                     <h3 class="faq__accordion-item-title">
                       How do I create an account on the job board?
                     </h3>
-                    <div class="faq__accordion-item-icon">&#10011;</div>
+                    <div class="faq__accordion-item-icon">+</div>
                   </div>
                   <div class="faq__accordion-item-body">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -790,7 +844,7 @@
                       Is there a cost to use the job board, and what features
                       are free?
                     </h3>
-                    <div class="faq__accordion-item-icon">&#10011;</div>
+                    <div class="faq__accordion-item-icon">+</div>
                   </div>
                   <div class="faq__accordion-item-body">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.

@@ -160,20 +160,38 @@
     box-shadow: 8px 8px 56px rgba(0, 0, 0, 0.05);
     border-radius: 56px;
 
+    
+
     input[type="text"] {
       &:nth-child(1) {
         text-align: center;
         border: none;
+        padding-left: 8px;
         @include adaptiv-value("font-size", 16, 12, 0);
+
+        &::placeholder{
+          background-image: url(../icons/input-1.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          background-size: 16px;
+        }
       }
 
       &:nth-child(2) {
+       margin-left: -18px;
         text-align: center;
         border: none;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         border-left: 1px solid #000;
         @include adaptiv-value("font-size", 16, 12, 0);
+
+        &::placeholder{
+          background-image: url(../icons/input-2.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          background-size: 16px;
+        }
       }
     }
   }
@@ -190,6 +208,7 @@
     background: var(--primary-500);
     border: 1px solid var(--primary-500);
     border-radius: 100px;
+    color: #ffffff;
   }
 
   &__slider {

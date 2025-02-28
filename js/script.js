@@ -1,5 +1,6 @@
 import slider from "./modules/slider.js";
 import tabs from "./modules/tabs.js";
+import modalWindow from "./modules/modal.js";
 import addPersonsCards from "./modules/addPersonCards.js";
 
 import { persons } from "./modules/personsData.js";
@@ -37,6 +38,49 @@ window.addEventListener("DOMContentLoaded", () => {
     wrapperSelector: ".hero__slider",
     itemSelector: ".hero__slider-item img", //img elements only
   });
+
+  // modal window
+
+  modalWindow({
+    openSelector: "[data-opensign]",
+    // closeSelector: "[data-modalclosetwo]",
+    parentSelector: ".form",
+    itemSelector: ".form__signin",
+  });
+
+  //change register form
+  const formSignUp = document.querySelector("#signup");
+  const formSignIn = document.querySelector("#signin");
+  const linkSignUp = document.querySelector(".signup");
+  const linkSignIn = document.querySelector(".signin");
+
+  linkSignUp.addEventListener("click", () => {
+    formSignUp.style.display = "none";
+    formSignIn.style.display = "block";
+    console.log("open formSignIn");
+  });
+
+  linkSignIn.addEventListener("click", () => {
+    formSignUp.style.display = "block";
+    formSignIn.style.display = "none";
+    console.log("open formSignUp");
+  });
+
+  function changeActive() {
+    linkSignUp.addEventListener("click", () => {
+      formSignUp.style.display = "none";
+      formSignIn.style.display = "block";
+      console.log("open formSignIn");
+    });
+
+    linkSignIn.addEventListener("click", () => {
+      formSignUp.style.display = "block";
+      formSignIn.style.display = "none";
+      console.log("open formSignUp");
+    });
+  }
+
+  // changeActive();
 
   // tabs in about section
   tabs({
@@ -160,6 +204,8 @@ window.addEventListener("DOMContentLoaded", () => {
       item.closest(".faq__accordion-item").classList.add("collapsed");
       const content = item.nextElementSibling;
       content.style.display = content.style.display == "flex" ? "none" : "flex";
+      const icon = item.querySelector(".faq__accordion-item-icon");
+      icon.textContent = icon.textContent == "+" ? "-" : "+";
     });
   });
 
