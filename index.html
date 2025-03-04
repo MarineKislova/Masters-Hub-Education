@@ -82,13 +82,11 @@
                   type="text"
                   class="form-control"
                   placeholder="e.g. UX Designer"
-                  aria-placeholder="e.g. UX Designer"
                 />
                 <input
                   type="text"
                   class="form-control"
                   placeholder="e.g. Liverpool, USA"
-                  aria-placeholder="e.g. Liverpool, USA"
                 />
               </form>
               <button type="submit" class="hero__search-btn btn btn-primary">
@@ -156,7 +154,7 @@
                 <input
                   type="password"
                   placeholder="Enter password"
-                  autocomplete="current-password"
+                  autocomplete="new-password"
                   required
                 />
               </div>
@@ -209,42 +207,80 @@
             </div>
             <div class="tab-nav">
               <button type="button" class="tab-btn" id="developer">
-                <img src="icons/developer.svg" alt="" />
+                <!-- <img src="icons/developer.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48L0 80zM64 96l0 64 64 0 0-64L64 96zM0 336c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96zm64 16l0 64 64 0 0-64-64 0zM304 32l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm80 64l-64 0 0 64 64 0 0-64zM256 304c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16l0 96c0 8.8-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-160zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"
+                  />
+                </svg>
                 Developer
               </button>
               <button type="button" class="tab-btn nav-active" id="uiDesigner">
-                <img src="icons/uiDesigner.svg" alt="" />
+                <!-- <img src="icons/uiDesigner.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M368 80l32 0 0 32-32 0 0-32zM352 32c-17.7 0-32 14.3-32 32L128 64c0-17.7-14.3-32-32-32L32 32C14.3 32 0 46.3 0 64l0 64c0 17.7 14.3 32 32 32l0 192c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l192 0c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l0-192c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-64 0zM96 160c17.7 0 32-14.3 32-32l192 0c0 17.7 14.3 32 32 32l0 192c-17.7 0-32 14.3-32 32l-192 0c0-17.7-14.3-32-32-32l0-192zM48 400l32 0 0 32-32 0 0-32zm320 32l0-32 32 0 0 32-32 0zM48 112l0-32 32 0 0 32-32 0z"
+                  />
+                </svg>
                 UI Designer
               </button>
               <button type="button" class="tab-btn" id="projectManager">
-                <img src="icons/projectManager.svg" alt="" />
+                <!-- <img src="icons/projectManager.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M448 160l-128 0 0-32 128 0 0 32zM48 64C21.5 64 0 85.5 0 112l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 64zM448 352l0 32-256 0 0-32 256 0zM48 288c-26.5 0-48 21.5-48 48l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 288z"
+                  />
+                </svg>
                 Project Manager
               </button>
               <button type="button" class="tab-btn" id="designer">
-                <img src="icons/designer.svg" alt="" />
+                <!-- <img src="icons/designer.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path
+                    d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"
+                  />
+                </svg>
                 Designer
               </button>
               <button type="button" class="tab-btn" id="accountant">
-                <img src="icons/accountant.svg" alt="" />
+                <!-- <img src="icons/accountant.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
+                  />
+                </svg>
                 Accountant
               </button>
               <button type="button" class="tab-btn" id="HR">
-                <img src="icons/hr.svg" alt="" />
+                <!-- <img src="icons/hr.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8 384l0-128 16 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-288 56 0 64 0 16 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16 0 0-64 192 0 0 192-192 0 0-32-64 0 0 48c0 26.5 21.5 48 48 48l224 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48L368 0c-26.5 0-48 21.5-48 48l0 80-76.9 0-65.9 0c-33.7 0-64.9 17.7-82.3 46.6l-58.3 97c-9.1 15.1-4.2 34.8 10.9 43.9s34.8 4.2 43.9-10.9L120 256.9 120 480c0 17.7 14.3 32 32 32s32-14.3 32-32z"
+                  />
+                </svg>
                 Human Resource
               </button>
               <button type="button" class="tab-btn" id="marketing">
-                <img src="icons/marketing.svg" alt="" />
+                <!-- <img src="icons/marketing.svg" alt="" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M0 96C0 60.7 28.7 32 64 32l132.1 0c19.1 0 37.4 7.6 50.9 21.1L289.9 96 448 96c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-256c0-8.8-7.2-16-16-16l-161.4 0c-10.6 0-20.8-4.2-28.3-11.7L213.1 87c-4.5-4.5-10.6-7-17-7L64 80z"
+                  />
+                </svg>
                 Marketing
               </button>
             </div>
             <div class="tab-content">
-              <div class="tab-content__container" id="developer"></div>
-              <div class="tab-content__container" id="uiDesigner"></div>
-              <div class="tab-content__container" id="projectManager"></div>
-              <div class="tab-content__container" id="designer"></div>
-              <div class="tab-content__container" id="accountant"></div>
-              <div class="tab-content__container" id="HR"></div>
-              <div class="tab-content__container" id="marketing"></div>
+              <div class="tab-content__container" data-tab="developer"></div>
+              <div class="tab-content__container" data-tab="uiDesigner"></div>
+              <div
+                class="tab-content__container"
+                data-tab="projectManager"
+              ></div>
+              <div class="tab-content__container" data-tab="designer"></div>
+              <div class="tab-content__container" data-tab="accountant"></div>
+              <div class="tab-content__container" data-tab="HR"></div>
+              <div class="tab-content__container" data-tab="marketing"></div>
             </div>
             <div class="seekers__btn">
               <span>View All </span>
@@ -279,7 +315,12 @@
                 </div>
               </div>
               <div class="features__video">
-                <img src="img/Video.png" alt="" />
+                <video preload="metadata" width="349" height="572" controls>
+                  <source
+                    src="https://videos.pexels.com/video-files/7011586/7011586-uhd_1440_2560_24fps.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div class="features__block">
                 <div class="features__block-card-2">
@@ -400,8 +441,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2021/08/05/12/36/software-development-6523979_640.jpg"
                 >
@@ -419,8 +460,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2021/11/14/18/36/telework-6795505_640.jpg"
                 >
@@ -438,16 +479,22 @@
               <div class="showcase__portfolio-item expanded">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2017/10/06/22/27/communication-2824850_640.jpg"
                 >
                   <source
-                    src="https://videos.pexels.com/video-files/30837830/13187417_360_640_30fps.mp4"
+                    src="https://videos.pexels.com/video-files/4464847/4464847-uhd_2560_1440_25fps.mp4"
                     type="video/mp4"
                   />
-                  Your browser does not support the video tag.
+                  <p>
+                    Your browser does not support the video tag.
+                    <a
+                      href="https://videos.pexels.com/video-files/30837830/13187417_360_640_30fps.mp4"
+                      >Try download video here</a
+                    >
+                  </p>
                 </video>
                 <div class="showcase__portfolio-content">
                   <h3>Floyd Miles</h3>
@@ -457,8 +504,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2016/11/19/14/16/man-1839500_640.jpg"
                   muted
@@ -477,8 +524,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_640.jpg"
                 >
@@ -496,8 +543,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2015/08/18/09/00/businessman-893492_640.jpg"
                 >
@@ -515,13 +562,13 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2015/11/15/09/27/calculator-1044173_640.jpg"
                 >
                   <source
-                    src="https://videos.pexels.com/video-files/6931246/6931246-sd_360_640_25fps.mp4"
+                    src="https://videos.pexels.com/video-files/7821805/7821805-hd_1920_1080_30fps.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -535,8 +582,8 @@
               <div class="showcase__portfolio-item">
                 <video
                   preload="metadata"
-                  width="461px"
-                  height="603px"
+                  width="461"
+                  height="603"
                   controls
                   poster="https://cdn.pixabay.com/photo/2020/12/03/23/35/work-5801876_640.jpg"
                 >

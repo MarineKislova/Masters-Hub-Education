@@ -8,19 +8,23 @@
   height: 100%;
   overflow: hidden;
   background-color: rgba(19, 18, 26, 0.7);
+  padding-top: 50px;
 
   &__row {
-    max-width: 350px;
-    margin: 40px auto;
+    max-width: 450px;
+    width: 100%;
+    margin: 0px auto;
+  
   }
 
   &__signup,
   &__signin {
-    background-color: #9c7feb;
-    // backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(156, 127, 235, 0.9);
+    backdrop-filter: blur(10px);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -39,13 +43,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 
     input,
-    .form button {
+    &__submit button {
       outline: none;
       border: 1px solid #e5e7eb;
       margin: 8px 0;
+
     }
+    
 
     input {
       background-color: #fff;
@@ -53,7 +60,6 @@
       padding-right: 3rem;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      max-width: 300px;
       border-radius: 0.5rem;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     }
@@ -69,9 +75,9 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 500;
-    width: 100%;
     border-radius: 0.5rem;
     text-transform: uppercase;
+    width: 100%;
   }
   &__signup-link,
   &__signin-link {

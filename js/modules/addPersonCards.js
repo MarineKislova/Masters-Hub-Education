@@ -60,7 +60,7 @@ function addPersonsCards(person, containerSelector) {
     card.appendChild(description);
 
     jobTitlesContainer.forEach((container) => {
-      if (container.getAttribute("id") === person.dataTab) {
+      if (container.getAttribute("data-tab") === person.dataTab) {
         container.appendChild(card);
       }
     });
